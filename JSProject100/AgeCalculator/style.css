@@ -1,0 +1,52 @@
+body {
+  background-color: #222222;
+}
+
+.container {
+  background-color: white;
+
+  /* top right bottom left */
+  margin: 200px 100px 0px 100px;
+  padding: 10px;
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+label {
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+#birthdayInput{
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border: solid grey 1px;
+  font-size: 18px;
+  width: 300px;
+}
+
+
+#ageButton {
+  background-color: rgb(56, 131, 235);
+  color: aliceblue;
+  
+  font-size: 20px;
+  border-radius: 10px;
+  border: 0px;
+  padding: 10px 20px;
+}
+
+#showAge {
+  font-size: 24px;
+  font-weight: 600;
+}
