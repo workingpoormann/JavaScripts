@@ -1,15 +1,28 @@
 /**
- * API KEYはFrontend側HTML側からは読み込むことができないので
- * Server側でAPIKEYを用いてOpenWeatherにアクセスしてデータを取得する
- * そのデータをFrontend側から取得するという方法をとる必要がある
+ * OpenWeather から天気のデータを取得するにはOpenWeather APIにアクセスして
+ * データを取得する
+ * その際にAPI KEYを渡す必要があり、API KEYは秘匿情報
+ *
+ * 今回の実装だとAPI KEY は .env というローカルのファイルに記述しており
+ * 普通のJSだとローカルファイルにアクセスできないため
+ *
+ * 1. ローカルにサーバーを立てて .env を読み込んで
+ *   OpenWeather APIから情報を取得
+ *
+ * 2. その後Frontend側からこのローカルサーバーにアクセスして
+ *   データを表示する
+ *
+ * という感じになった
  */
 
-// 環境変数をよむ
+// 環境変数を読むnpm package
+// やってることは .env ローカルのファイルを読んでるだけ
 const dotenv = require("dotenv");
 dotenv.config();
 
+//
 // JavaScriptでローカルにサーバーを立てる
-// express というめちゃ有名な
+// express という有名なpackage
 const express = require("express");
 const cors = require("cors");
 
@@ -23,11 +36,11 @@ app.use((req, res, next) => {
 
 app.use(express.static("public"));
 
-// localhost PORT
+// http://localhost:PORT
 app.get("/", async (req, res) => {
   const city = req.query.city;
 
-  // ここで環境変数を読み込む
+  // API KEYを読みだす
   const apiKey = process.env.OPENWEATHER_APIKEY;
 
   // OpenWeather MapのAPIにアクセスする
