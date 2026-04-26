@@ -58,3 +58,25 @@ class TodoManager {
     this.#todos = this.#todos.filter((todo) => todo.id !== id);
   }
 }
+
+const todoManager = new TodoManager();
+
+const todoInput = document.getElementById("todoInput");
+
+todoInput.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  const text = document.getElementById("todoText").value;
+  const hour = Number(document.getElementById("hour").value);
+  const min = Number(document.getElementById("minute").value);
+  const sec = Number(document.getElementById("second").value);
+  console.log(text, hour, min, sec);
+
+  todoManager.addTodo(text, hour, min, sec);
+});
+
+/**
+  console.log("getTodo", todoManager.getTodo(2));
+  todoManager.deleteTodo(4);
+  console.log("getAllTodo", todoManager.getTodos());
+*/
