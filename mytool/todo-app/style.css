@@ -1,0 +1,75 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #333333;
+}
+
+main {
+  background-color: #cccccc;
+  /* top left bottom right */
+  margin: 80px 120px 0 120px;
+  padding: 10px 30px;
+  border-radius: 2px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+main > header {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+#todoSection {
+  display: flex;
+  flex-direction: column;
+}
+
+#todoSection > #todoForm > #todoText {
+  width: 100%;
+}
+
+#todoSection > #todoForm {
+  background-color: blue;
+  display: flex;
+  margin-bottom: 24px;
+}
+
+#todoSection > #todoForm > #todoText {
+  font-size: 20px;
+  padding: 2px 4px;
+}
+
+#todoSection > #todoForm > #todoDatetime {
+  font-size: 20px;
+  padding: 2px 4px;
+}
+
+#todoSection > #todoForm > #todoElapsedTime {
+  display: flex;
+}
+
+#todoSection > #todoForm > #todoElapsedTime > input {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+
+  width: 40px;
+  text-align: center;
+}
+
+#todoSection > #todoForm > #todoInput {
+  font-size: 20px;
+  padding: 4px 8px;
+}
+
+#todoList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
