@@ -19,6 +19,22 @@ class Todo {
   set id(id) {
     this.#id = id;
   }
+
+  toJSON() {
+    return {
+      id: this.id,
+      text: this.#text,
+      hour: this.#hour,
+      min: this.#min,
+      sec: this.#sec,
+    };
+  }
+
+  static fromJSON(obj) {
+    const todo = new Todo(obj.text, obj.hour, obj.min, obj.sec);
+    todo.id = obj.id;
+    return todo;
+  }
 }
 
 class TodoManager {
