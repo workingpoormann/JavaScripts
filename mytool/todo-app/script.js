@@ -76,6 +76,24 @@ class TodoManager {
   }
 }
 
+const STORAGE_KEY = "myapp_todos";
+
+function saveTodos(todos) {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(todos));
+}
+
+function loadTodos() {
+  const jsonString = localStorage.getItem(STORAGE_KEY);
+  if (!jsonString) return [];
+
+  try {
+    return JSON.parse(jsonString);
+  } catch (e) {
+    console.error("localStorage parse error!", e);
+    return [];
+  }
+}
+
 const todoManager = new TodoManager();
 
 const todoInput = document.getElementById("todoInput");
