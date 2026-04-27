@@ -41,7 +41,8 @@ class TodoManager {
   #todos = [];
 
   constructor() {
-    // load todos from locastorage
+    const rawObject = loadTodos();
+    this.#todos = rawObject.map(Todo.fromJSON);
   }
 
   getTodos() {
