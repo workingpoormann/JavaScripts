@@ -124,4 +124,24 @@ todoInput.addEventListener("click", (e) => {
   todoManager.addTodo(text, hour, min, sec);
 
   saveTodos(todoManager.getTodos());
+  render(todoManager.getTodos());
 });
+
+function render(todos) {
+  const ul = document.querySelector("#todoList ul");
+  ul.innerHTML = "";
+
+  todos.forEach((todo, index) => {
+    const li = document.createElement("li");
+
+    li.textContent = `${todo.text} ${todo.hour}:${todo.min}:${todo.sec}`;
+    ul.appendChild(li);
+  });
+}
+
+function init() {
+  const ul = document.querySelector("#todoList ul");
+  ul.innerHTML = "";
+}
+
+init();
