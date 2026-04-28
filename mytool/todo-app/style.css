@@ -69,7 +69,8 @@ main > header {
 }
 
 #todoList {
+  padding-left: 24px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
