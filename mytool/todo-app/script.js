@@ -16,6 +16,22 @@ class Todo {
     return this.#id;
   }
 
+  get text() {
+    return this.#text;
+  }
+
+  get hour() {
+    return this.#hour;
+  }
+
+  get min() {
+    return this.#min;
+  }
+
+  get sec() {
+    return this.#sec;
+  }
+
   set id(id) {
     this.#id = id;
   }
