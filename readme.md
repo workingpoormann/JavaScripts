@@ -16,3 +16,4 @@
   - [Age Calculator](https://www.100jsprojects.com/project/age-calculator)
   - [Tip Calculator](https://www.100jsprojects.com/project/tip-calculator)
   - [Weather App](https://www.100jsprojects.com/project/weather-app)
+  - [Temperature Converter](https://www.100jsprojects.com/project/temperature-converter)
