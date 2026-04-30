@@ -16,6 +16,10 @@ main {
 }
 
 .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   background-color: white;
   width: 200px;
   height: 200px;
